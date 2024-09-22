@@ -1,0 +1,18 @@
+{
+    "info": {
+        "name": "iron",
+        "display": true,
+        "solid": true,
+        "gravity": false,
+        "fluid": false,
+        "density": 787,
+        "color": [160, 160, 160],
+        "color_variation": [5, 5, 5]
+    },
+    "mixing": [
+        ["rust", "rust", 1],
+        ["salt_water", "rust", 10],
+        ["saltish_water", "rust", 5],
+        ["water", "rust", 1]
+    ]
+}

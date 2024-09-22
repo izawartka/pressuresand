@@ -1,0 +1,15 @@
+{
+    "info": {
+        "name": "saltish_water",
+        "display": false,
+        "solid": true,
+        "gravity": true,
+        "fluid": true,
+        "density": 105,
+        "color": [64, 64, 250],
+        "color_variation": [10, 10, 10]
+    },
+    "mixing": [
+        ["salt", "salt_water", 20]
+    ]
+}

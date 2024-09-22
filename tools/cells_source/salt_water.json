@@ -1,0 +1,12 @@
+{
+    "info": {
+        "name": "salt_water",
+        "display": true,
+        "solid": true,
+        "gravity": true,
+        "fluid": true,
+        "density": 110,
+        "color": [80, 80, 250],
+        "color_variation": [10, 10, 10]
+    }
+}

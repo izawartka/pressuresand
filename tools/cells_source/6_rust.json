@@ -1,0 +1,12 @@
+{
+    "info": {
+        "name": "rust",
+        "display": true,
+        "solid": true,
+        "gravity": true,
+        "fluid": false,
+        "density": 525,
+        "color": [250, 160, 128],
+        "color_variation": [15, 15, 15]
+    }
+}

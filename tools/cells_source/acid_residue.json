@@ -1,0 +1,18 @@
+{
+    "info": {
+        "name": "acid_residue",
+        "display": false,
+        "solid": true,
+        "gravity": true,
+        "fluid": true,
+        "density": 170,
+        "color": [200, 200, 60],
+        "color_variation": [15, 15, 15]
+    },
+    "mixing": [
+        ["stone", "acid_residue", 50, true],
+        ["iron", "acid_residue", 80, true],
+        ["rust", "acid_residue", 100, true],
+        ["sand", "acid_residue", 50, true]
+    ]
+}

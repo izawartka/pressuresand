@@ -1,0 +1,12 @@
+{
+    "info": {
+        "name": "stone",
+        "display": true,
+        "solid": true,
+        "gravity": false,
+        "fluid": false,
+        "density": 271,
+        "color": [128, 128, 128],
+        "color_variation": [10, 10, 10]
+    }
+}

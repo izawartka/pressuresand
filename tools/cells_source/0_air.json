@@ -1,0 +1,12 @@
+{
+    "info": {
+        "name": "air",
+        "display": true,
+        "solid": false,
+        "gravity": false,
+        "fluid": false,
+        "density": 0,
+        "color": [0, 0, 0],
+        "color_variation": [0, 0, 0]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "info": {
+        "name": "salt",
+        "display": true,
+        "solid": true,
+        "gravity": true,
+        "fluid": false,
+        "density": 137,
+        "color": [250, 250, 250],
+        "color_variation": [5, 5, 5]
+    },
+    "mixing": [
+        ["water", "salt_water", 20]
+    ]
+}

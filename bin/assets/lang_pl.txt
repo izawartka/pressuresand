@@ -1,0 +1,11 @@
+window_title = pressuresand
+cell_type_air = air
+cell_type_stone = stone
+cell_type_sand = sand
+cell_type_water = water
+cell_type_salt = salt
+cell_type_salt_water = salt water
+cell_type_saltish_water = saltish water
+cell_type_iron = iron
+cell_type_rust = rust
+cell_type_acid = acid

@@ -1,7 +1,7 @@
 # pressuresand
 A falling sand game, another RZUF test. Inspired by [The Powder Toy](https://github.com/The-Powder-Toy/The-Powder-Toy) and countless similar ones. The advantage is the ability to easily create new types of cells (elements) in JSON and convert them into binary format using the included Python script in the tools folder.
 
-![Example expression](https://maseuko.pl/res/mathgraph.png)
+![Example expression](https://maseuko.pl/res/pressuresand.png)
 
 ### RZUF3
 You can find the framework repository [here](https://github.com/izawartka/rzuf3).

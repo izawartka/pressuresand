@@ -60,10 +60,10 @@ void TypePickerItem::addText()
 	if (m_textRenderer != nullptr) return;
 
 	RZUF3_TextRendererOptions textOptions;
-	textOptions.fontFilepath = "assets/fonts/roboto-regular.ttf";
-	textOptions.style.alignment = RZUF3_Align_TopLeft;
-	textOptions.x = PICKER_PADDING;
-	textOptions.y = PICKER_PADDING;
+	textOptions.style.fontFilepath = "assets/fonts/roboto-regular.ttf";
+	textOptions.alignment = RZUF3_Align_TopLeft;
+	textOptions.dstRect.x = PICKER_PADDING;
+	textOptions.dstRect.y = PICKER_PADDING;
 	textOptions.style.size = 16;
 	textOptions.text = "cell_type_" + m_name;
 
@@ -85,7 +85,7 @@ void TypePickerItem::addClickable()
 	if (m_clickable != nullptr) return;
 
 	RZUF3_ClickableOptions clickableOptions = {
-		{0, 0, PICKER_FULL_WIDTH, PICKER_FULL_HEIGHT}
+		{0, 1, PICKER_FULL_WIDTH, PICKER_FULL_HEIGHT-2}
 	};
 
 	m_clickable = new RZUF3_Clickable(clickableOptions);

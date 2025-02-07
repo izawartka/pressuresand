@@ -3,14 +3,17 @@
 
 RZUF3_Game* game = nullptr;
 
-#ifndef _DEBUG
-#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
-#endif
 int main(int argc, char* argv[]) {
+
+#ifdef _DEBUG
     spdlog::set_level(spdlog::level::debug);
+#else
+    spdlog::set_level(spdlog::level::off);
+#endif // _DEBUG
+
 
     game = new RZUF3_Game();
-    game->loadLanguage("assets/lang_pl.txt");
+    game->loadLanguage("assets/lang_en.txt");
     game->initWindow(WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT, false);
     game->setWindowTitle("window_title", true);
     game->setWindowIcon("assets/icon.png");
@@ -20,10 +23,6 @@ int main(int argc, char* argv[]) {
     RZUF3_SceneDefinition* sceneDef = MainScene::getSceneDef();
 
     game->setScene(sceneDef);
-#ifdef _DEBUG 
-    // reload the scene to ensure all ObjectScripts are deinitialized correctly
-    game->setScene(sceneDef);
-#endif
     game->startGameLoop();
 
     delete game;

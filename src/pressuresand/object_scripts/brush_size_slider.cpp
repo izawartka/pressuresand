@@ -23,6 +23,10 @@ void BrushSizeSlider::deinit()
 
 void BrushSizeSlider::onUIValueChange(RZUF3_UIValueChangeEvent* event)
 {
-	int brushSize = event->getValue() * 2 + 1;
+	if (event->getTypeIndex() != typeid(int)) return;
+	if (event->getValue() == nullptr) return;
+
+	int value = *(int*)event->getValue();
+	int brushSize = value * 2 + 1;
 	mp_brush->setBrushSize(brushSize);
 }

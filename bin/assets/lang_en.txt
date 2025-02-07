@@ -1,4 +1,5 @@
 window_title = pressuresand
+brush_size = brush size:
 cell_type_air = air
 cell_type_stone = stone
 cell_type_sand = sand

@@ -40,13 +40,35 @@ RZUF3_SceneDefinition* MainScene::getSceneDef()
     objTypePicker.parentName = "ui_root";
     m_sceneDef->objects.push_back(objTypePicker);
 
+    // Brush size label //
+    RZUF3_TextRendererOptions brushSizeLabelOptions;
+    brushSizeLabelOptions.style.fontFilepath = "assets/fonts/roboto-regular.ttf";
+    brushSizeLabelOptions.text = "brush_size";
+    brushSizeLabelOptions.useLangFile = true;
+    brushSizeLabelOptions.alignment = RZUF3_Align_Left;
+
+    RZUF3_ObjectDefinition objBrushSizeLabel;
+    objBrushSizeLabel.name = "brush_size_label";
+    objBrushSizeLabel.scripts = {
+        new RZUF3_TextRenderer(brushSizeLabelOptions),
+		new RZUF3_WindowAnchor({0, 1, 16, -24})
+	};
+    objBrushSizeLabel.parentName = "ui_root";
+    m_sceneDef->objects.push_back(objBrushSizeLabel);
+
     // Brush size //
+    RZUF3_SliderOptions brushSizeSliderOptions;
+    brushSizeSliderOptions.min = 1;
+    brushSizeSliderOptions.max = 10;
+    brushSizeSliderOptions.value = 1;
+    brushSizeSliderOptions.alignment = RZUF3_Align_Left;
+
     RZUF3_ObjectDefinition objBrushSize;
     objBrushSize.name = "brush_size";
     objBrushSize.scripts = {
-        new RZUF3_Slider(1, 10, 1),
+        new RZUF3_Slider(brushSizeSliderOptions),
         new BrushSizeSlider(worldView->getBrush()),
-        new RZUF3_WindowAnchor({0, 1, 16, -32})
+        new RZUF3_WindowAnchor({0, 1, 100, -24})
     };
     objBrushSize.parentName = "ui_root";
     m_sceneDef->objects.push_back(objBrushSize);
@@ -56,10 +78,10 @@ RZUF3_SceneDefinition* MainScene::getSceneDef()
 	objAuthor.name = "author";
 
     RZUF3_TextRendererOptions authorOptions;
-    authorOptions.fontFilepath = "assets/fonts/roboto-regular.ttf";
+    authorOptions.style.fontFilepath = "assets/fonts/roboto-regular.ttf";
     authorOptions.text = "masuo 2024.09";
-    authorOptions.style.useLangFile = false;
-    authorOptions.style.alignment = RZUF3_Align_BottomRight;
+    authorOptions.useLangFile = false;
+    authorOptions.alignment = RZUF3_Align_BottomRight;
 
     objAuthor.scripts = {
         new RZUF3_TextRenderer(authorOptions),
